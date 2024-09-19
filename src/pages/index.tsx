@@ -11,7 +11,7 @@ export function Index() {
     <div class=''>
       <div class='fixed top-0 text-white flex items-center justify-between w-full p-4 z-10'>
         <div class='flex items-center gap-x-2'>
-          <button class="hover:bg-slate-700 p-1 md:hidden" onClick={() => setIsModal(true)}>
+          <button class="hover:opacity-80 p-1 md:hidden" onClick={() => setIsModal(true)}>
             {/* menu icon */}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
