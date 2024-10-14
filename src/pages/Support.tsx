@@ -124,8 +124,6 @@ function Portfolio() {
   </>
 }
 
-
-
 export default function App() {
 
   return (
@@ -136,6 +134,7 @@ export default function App() {
         <Vision />
         <Portfolio />
       </Layout>
+
 
     </>
   )
