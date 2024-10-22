@@ -130,9 +130,10 @@ export default function App() {
     <>
       <Layout>
         <Banner />
-        <AboutUs />
+        <iframe src="https://drive.google.com/file/d/12DuAEFq8D1ufyohkuyCDjr9s_-foplKy/preview" width="640" height="480" allow="autoplay"></iframe>
+        {/* <AboutUs />
         <Vision />
-        <Portfolio />
+        <Portfolio /> */}
       </Layout>
 
 
