@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "publish": "deno task build && git add . && git commit -m 'publish' && git push"
+    "deploy": "deno task build && git add . && git commit -m 'publish' && git push"
   },
   "dependencies": {
     "clsx": "^2.1.1",
