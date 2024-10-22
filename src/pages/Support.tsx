@@ -19,15 +19,13 @@ function AboutUs() {
 function Banner() {
   return (<>
     <div className="relative">
-      <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center">
-        <h1 className="">
-          Welcome to the official website
-        </h1>
-        <h1 className="">
-          PT Summit Vision Nusantara
-        </h1>
+      <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center" style={{boxShadow:"inset 0 0 0 2000px rgba(0,0,0,.6)"}}>
+        <h1 className="text-white">
+          SUPPORT
+        </h1>        
       </div>
-      <img src="/images/banner.png" alt="" className="h-[500px] object-cover w-full" />
+      
+      <img src="/images/banner-support.jpg" alt="" className="h-[500px] bg-cover w-full"/>
     </div>
   </>)
 }

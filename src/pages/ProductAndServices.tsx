@@ -1,10 +1,15 @@
 import { Layout } from "../components/Layout"
+import { data } from "../data"
+
 
 function AboutUs() {
   return (<>
     <div className=" text-center">
-      <h1 className="text-2xl font-bold my-8 font-serif">
-        ABOUT US
+      <h1 className="text-2xl font-bold my-8 underline text-cyan-900">
+        VICON
+      </h1>
+      <h1 className="text-md py-6 my-8 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
+        SOFTWARE
       </h1>
       <div className="text-blue-900 bg-about p-12 flex flex-col items-center gap-y-4 leading-8">
         <p className="max-w-lg md:max-w-4xl">
@@ -20,14 +25,14 @@ function Banner() {
   return (<>
     <div className="relative">
       <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center">
-        <h1 className="">
-          Welcome to the official website
+        <h1 className="text-white">
+          Product and Services
         </h1>
-        <h1 className="">
+        {/* <h1 className="">
           PT Summit Vision Nusantara
-        </h1>
+        </h1> */}
       </div>
-      <img src="/images/banner.png" alt="" className="h-[500px] object-cover w-full" />
+      <img src="/images/banner-product-and-services.png" alt="" className="h-[500px] object-cover w-full" />
     </div>
   </>)
 }
@@ -132,9 +137,47 @@ export default function App() {
     <>
       <Layout>
         <Banner />
-        <AboutUs />
+
+        <div className=" text-center">
+          <h1 className="text-2xl font-bold my-8 underline text-cyan-900">
+            VICON
+          </h1>
+          <h1 className="text-md py-6 my-8 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
+            SOFTWARE
+          </h1>
+          <div className="flex items-center flex-col">
+            <div className="max-w-lg md:max-w-4xl">
+              {data.vicons.map((e, idx) =>
+                <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <p>{e.text}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h1 className="text-md py-6 my-8 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
+            HARDWARE
+          </h1>
+          <div className="flex items-center flex-col">
+            <div className="max-w-lg md:max-w-4xl">
+              {data.viconHardware.map((e, idx) =>
+                <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: e.text }}></div>                  
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* <AboutUs />
         <Vision />
-        <Portfolio />
+        <Portfolio /> */}
       </Layout>
 
     </>
