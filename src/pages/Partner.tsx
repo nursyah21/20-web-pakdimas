@@ -19,13 +19,13 @@ function AboutUs() {
 function Banner() {
   return (<>
     <div className="relative">
-      <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center" style={{boxShadow:"inset 0 0 0 2000px rgba(0,0,0,.6)"}}>
+      <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center" style={{ boxShadow: "inset 0 0 0 2000px rgba(0,0,0,.6)" }}>
         <h1 className="text-white">
           Our Corporate
-        </h1>        
+        </h1>
       </div>
-      
-      <img src="/images/banner-partner.png" alt="" className="h-[500px] bg-cover w-full"/>
+
+      <img src="/images/banner-partner.png" alt="" className="h-[500px] bg-cover w-full" />
     </div>
   </>)
 }
@@ -123,6 +123,28 @@ function Portfolio() {
 }
 
 
+const sponsor = [
+  {
+    img: "/images/vicon-logo.png",
+    title: "VICON"
+  },
+  {
+    img: "/images/motek-logo.png",
+    title: "MOTEK"
+  },
+  {
+    img: "/images/cometa-logo.png",
+    title: "COMETA"
+  },
+  {
+    img: "/images/cyberdine-logo.png",
+    title: "CYBERDYNE"
+  },
+  {
+    img: "/images/amti-logo.png",
+    title: "AMTI"
+  }
+]
 
 export default function App() {
 
@@ -130,9 +152,28 @@ export default function App() {
     <>
       <Layout>
         <Banner />
-        {/* <AboutUs />
-        <Vision />
-        <Portfolio /> */}
+        <div className=" text-center flex flex-col items-center">
+          <h1 className="text-2xl font-bold my-8 font-serif underline text-blue-800">
+            PARTNER
+          </h1>
+
+          <p className="text-cyan-900 max-w-lg md:max-w-2xl text-lg font-medium mb-8">
+            We are pleased to offer a wide range of innovative and state-of-the-art products and software solutions from VICON, AMTI, COMETA, and MOTEK.
+          </p>
+
+          <div className="text-blue-900 bg-about p-12 flex flex-col items-center gap-y-4 leading-8 w-screen">
+            <div className="max-w-lg md:max-w-2xl">
+              {
+                sponsor.map((e, idx) =>
+                  <div key={idx}>
+                    <img src={e.img} alt="" className="max-w-[350px]" />
+                    <h1>{e.title}</h1>
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        </div>
       </Layout>
 
     </>

@@ -6,5 +6,5 @@ https://ptsvnusantara.com
 
 ## todo
 - mengambil aset yang diperlukan [x]
-- mengkopi semua text yang ada pada site google (styling seadanya)
+- mengkopi semua text yang ada pada site google (styling seadanya) [x]
 - finishing styling web

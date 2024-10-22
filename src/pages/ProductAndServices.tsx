@@ -162,22 +162,86 @@ export default function App() {
           <h1 className="text-md py-6 my-8 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
             HARDWARE
           </h1>
-          <div className="flex items-center flex-col">
+          <div className="flex items-center flex-col bg-about">
             <div className="max-w-lg md:max-w-4xl">
               {data.viconHardware.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[500px]" />
                   <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
-                  <div dangerouslySetInnerHTML={{ __html: e.text }}></div>                  
+                  <div dangerouslySetInnerHTML={{ __html: e.text }}></div>
                 </div>
               )}
             </div>
           </div>
         </div>
 
-        {/* <AboutUs />
-        <Vision />
-        <Portfolio /> */}
+        <div className=" text-center">
+          <h1 className="text-2xl font-bold my-8 underline ">
+            AMTI
+          </h1>
+          <div className="flex items-center flex-col bg-about">
+            <div className="max-w-lg md:max-w-4xl">
+              {data.amti.map((e, idx) =>
+                <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <p>{e.text}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h1 className="text-2xl font-bold my-8 underline ">
+            COMETA
+          </h1>
+          <div className="flex items-center flex-col bg-about">
+            <div className="max-w-lg md:max-w-4xl">
+              {data.cometa.map((e, idx) =>
+                <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <p>{e.text}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h1 className="text-2xl font-bold my-8 underline ">
+            MOTEK
+          </h1>
+          <div className="flex items-center flex-col bg-about">
+            <div className="max-w-lg md:max-w-4xl">
+              {data.motek.map((e, idx) =>
+                <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <p>{e.text}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h1 className="text-2xl font-bold my-8 underline ">
+            CYBERDYNE
+          </h1>
+          <div className="flex items-center flex-col bg-about">
+            <div className="max-w-lg md:max-w-4xl">
+              {data.cyberdyne.map((e, idx) =>
+                <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <p>{e.text}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </Layout>
 
     </>

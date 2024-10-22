@@ -19,13 +19,13 @@ function AboutUs() {
 function Banner() {
   return (<>
     <div className="relative">
-      <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center" style={{boxShadow:"inset 0 0 0 2000px rgba(0,0,0,.6)"}}>
+      <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center" style={{ boxShadow: "inset 0 0 0 2000px rgba(0,0,0,.6)" }}>
         <h1 className="text-white">
           SUPPORT
-        </h1>        
+        </h1>
       </div>
-      
-      <img src="/images/banner-support.jpg" alt="" className="h-[500px] bg-cover w-full"/>
+
+      <img src="/images/banner-support.jpg" alt="" className="h-[500px] bg-cover w-full" />
     </div>
   </>)
 }
@@ -128,10 +128,28 @@ export default function App() {
     <>
       <Layout>
         <Banner />
-        <iframe src="https://drive.google.com/file/d/12DuAEFq8D1ufyohkuyCDjr9s_-foplKy/preview" width="640" height="480" allow="autoplay"></iframe>
-        {/* <AboutUs />
-        <Vision />
-        <Portfolio /> */}
+        <div className="p-12 flex flex-col items-center gap-y-4 md:gap-y-8 leading-8 ">
+          <div className="max-w-lg md:max-w-4xl md:flex gap-x-8">
+            <div className="flex gap-x-4 my-4 justify-between">
+              <img src="/images/support.png" alt="" className="w-full flex-1" />
+              <div className="flex-1">
+                <h1 className="font-bold my-4">Support</h1>
+                <p>As a valued Summit Vision Nusantara customer, help is only ever an e ail or phone call away. Contact us at <a href="mailto:ptsvnusantara@gmail.com"></a>ptsvnusantara@gmail.com For remote assistance, if you need to share your screen, please dowload Team viewer from the link below</p>
+                <div className="flex text-center hover:opacity-90 duration-150">
+                  <a href="mailto:ptsvnusantara@gmail.com" className="w-full bg-[rgba(13,19,55,1)] text-white">EMAIL US</a>
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-x-4 my-4">
+              <iframe src="https://drive.google.com/file/d/12DuAEFq8D1ufyohkuyCDjr9s_-foplKy/preview" allow="autoplay" className="w-full flex-1"></iframe>
+              <div className="flex-1">
+                <h1 className="font-bold my-4">Documentation</h1>
+                <p>Have a more in-depth question about how your software or hardware works? Visit this page to view our wide range of detailed technical documentation, containing many useful user guides</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </Layout>
 
 
