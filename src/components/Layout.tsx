@@ -1,9 +1,10 @@
 import clsx from "clsx"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { A } from "./A"
 
 interface Props {
-  children?: any
+  children?: any,
+  mode?: "white" | "black"
 }
 
 function ContactUs() {
@@ -56,27 +57,46 @@ function ContactUs() {
   </>
 }
 
-export function Layout({ children }: Props) {
+export function Layout({ children, mode = "white" }: Props) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isTop, setIsTop] = useState(true)
+
+  useEffect(() => {
+    const isScrollDown = (e: Event) => {
+      if (window.scrollY > 10) {
+        setIsTop(false)
+      } else {
+        setIsTop(true)
+      }
+    }
+    window.addEventListener("scroll", isScrollDown)
+    return () => {
+      window.removeEventListener('scroll', isScrollDown)
+    }
+  }, [])
   return (
     <>
       <div
-        className="fixed top-0 z-20 bg-header w-full p-2 px-8 flex text-white items-center gap-x-2 justify-between"
+        className={clsx(
+          "fixed top-0 z-20 bg-header w-full p-2 px-8 flex text-white items-center gap-x-2 justify-between",
+          (mode === "white" && isTop) ? "text-white" : (mode === "black" && isTop) ? "text-black" : "",
+          isTop && "bg-transparent")}
+        id="nav"
       >
         <div className="flex items-center gap-x-2">
-          <button onClick={() => setIsOpen(!isOpen)} className="hover:opacity-80 block md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="hover:opacity-80 block lg:hidden">
             {isOpen
-              // menu
-              ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
               // close
-              : <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+              ? <svg xmlns="http://www.w3.org/2000/svg"  height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+              // menu
+              : <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill={(mode == "black" && isTop) ? "#000000" :"#e8eaed"}><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
             }
           </button>
           <img src="/images/ptsv.jpg" alt="" className="w-14" />
-          <h1 className="font-bold">PT Summit Vision Nusantara</h1>
+          <h1 className={clsx("font-bold", isOpen && "text-white")}>PT Summit Vision Nusantara</h1>
         </div>
 
-        <div className="hidden md:flex gap-x-8 items-center">
+        <div className="hidden lg:flex gap-x-8 items-center">
           <A href="/" className="hover:opacity-80" classActive="font-bold">Home</A>
           <A href="/products-and-services" className="hover:opacity-80" classActive="font-bold">Products and Services</A>
           <A href="/partner" className="hover:opacity-80" classActive="font-bold">Partner</A>
@@ -85,16 +105,8 @@ export function Layout({ children }: Props) {
       </div>
 
       {/* modal navbar */}
-      <div className={clsx("bg-header h-screen fixed top-0 transition-all ease-in-out duration-300 md:hidden z-10", isOpen ? 'w-full' : 'w-0')}>
+      <div className={clsx("bg-header h-screen fixed top-0 transition-all ease-in-out duration-300 lg:hidden z-10", isOpen ? 'w-full' : 'w-0')}>
         <div className={clsx("flex-col flex gap-y-2 text-white translate-y-[60px] py-2 px-4 transition-all", isOpen ? "opacity-100 delay-300" : "opacity-0")}>
-          {/* <button onClick={() => setIsOpen(!isOpen)} className="hover:opacity-80 block md:hidden">
-            {isOpen
-              // menu
-              ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
-              // close
-              : <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
-            }
-          </button> */}
           <A href="/" className="hover:opacity-80">Home</A>
           <A href="/products-and-services" className="hover:opacity-80">Products and Services</A>
           <A href="/partner" className="hover:opacity-80">Partner</A>
@@ -102,7 +114,9 @@ export function Layout({ children }: Props) {
         </div>
       </div>
 
-      {children}
+      <div className="overflow-hidden">
+        {children}
+      </div>
 
       <ContactUs />
     </>)

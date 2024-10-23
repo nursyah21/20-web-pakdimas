@@ -157,16 +157,16 @@ export default function App() {
             PARTNER
           </h1>
 
-          <p className="text-cyan-900 max-w-lg md:max-w-2xl text-lg font-medium mb-8">
+          <p className="text-cyan-900 max-w-lg md:max-w-2xl text-lg  mb-8">
             We are pleased to offer a wide range of innovative and state-of-the-art products and software solutions from VICON, AMTI, COMETA, and MOTEK.
           </p>
 
           <div className="text-blue-900 bg-about p-12 flex flex-col items-center gap-y-4 leading-8 w-screen">
-            <div className="max-w-lg md:max-w-2xl">
+            <div className="max-w-lg md:max-w-2xl grid md:grid-cols-3 gap-x-8 gap-y-8">
               {
                 sponsor.map((e, idx) =>
                   <div key={idx}>
-                    <img src={e.img} alt="" className="max-w-[350px]" />
+                    <img src={e.img} alt="" className="max-w-[200px] max-h-[100px]" />
                     <h1>{e.title}</h1>
                   </div>
                 )

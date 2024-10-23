@@ -130,7 +130,7 @@ export default function App() {
 
   return (
     <>
-      <Layout>
+      <Layout mode="black">
         <Banner />
         <AboutUs />
         <Vision />

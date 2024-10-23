@@ -137,7 +137,6 @@ export default function App() {
     <>
       <Layout>
         <Banner />
-
         <div className=" text-center">
           <h1 className="text-2xl font-bold my-8 underline text-cyan-900">
             VICON
@@ -145,11 +144,11 @@ export default function App() {
           <h1 className="text-md py-6 my-8 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
             SOFTWARE
           </h1>
-          <div className="flex items-center flex-col">
-            <div className="max-w-lg md:max-w-4xl">
+          <div className="flex items-center flex-col ">
+            <div className="max-w-lg xl:max-w-4xl  flex flex-col xl:flex-row gap-y-4 gap-x-8">
               {data.vicons.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
-                  <img src={e.img} alt="" className="max-w-[500px]" />
+                  <img src={e.img} alt="" className="max-w-[300px] max-h-[300px]" />
                   <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
                   <p>{e.text}</p>
                 </div>
@@ -163,12 +162,12 @@ export default function App() {
             HARDWARE
           </h1>
           <div className="flex items-center flex-col bg-about">
-            <div className="max-w-lg md:max-w-4xl">
+            <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
               {data.viconHardware.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
-                  <img src={e.img} alt="" className="max-w-[500px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
-                  <div dangerouslySetInnerHTML={{ __html: e.text }}></div>
+                  <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
             </div>
@@ -180,12 +179,12 @@ export default function App() {
             AMTI
           </h1>
           <div className="flex items-center flex-col bg-about">
-            <div className="max-w-lg md:max-w-4xl">
+            <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
               {data.amti.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
-                  <img src={e.img} alt="" className="max-w-[500px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
-                  <p>{e.text}</p>
+                  <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
             </div>
@@ -197,12 +196,12 @@ export default function App() {
             COMETA
           </h1>
           <div className="flex items-center flex-col bg-about">
-            <div className="max-w-lg md:max-w-4xl">
+            <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
               {data.cometa.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
-                  <img src={e.img} alt="" className="max-w-[500px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
-                  <p>{e.text}</p>
+                  <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
             </div>
@@ -214,12 +213,12 @@ export default function App() {
             MOTEK
           </h1>
           <div className="flex items-center flex-col bg-about">
-            <div className="max-w-lg md:max-w-4xl">
+            <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
               {data.motek.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
-                  <img src={e.img} alt="" className="max-w-[500px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
-                  <p>{e.text}</p>
+                  <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
             </div>
@@ -231,12 +230,12 @@ export default function App() {
             CYBERDYNE
           </h1>
           <div className="flex items-center flex-col bg-about">
-            <div className="max-w-lg md:max-w-4xl">
+            <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
               {data.cyberdyne.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
-                  <img src={e.img} alt="" className="max-w-[500px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
-                  <p>{e.text}</p>
+                  <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
             </div>

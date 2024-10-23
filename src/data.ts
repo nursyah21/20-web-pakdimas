@@ -122,17 +122,17 @@ Building on the success of Vantage, Vero combined market-leading resolution and 
       text: "The portable AccuSway-Optimized (ACS-O) is perfect for on-the-go balance assessments and training."
     },
     {
-      img: "/images/amti-force-plate.png",
+      img: "/images/amti-filler-force.png",
       title: "AMTI Filler Force Plates",
       text: "We supply AMTI filler force plates in quarter, half and full length sizes to create the optimum custom set-up."
     },
     {
-      img: "/images/amti-force-torque.png",
+      img: "/images/amti-force-plate.png",
       title: "AMTI Force Plate Stairs",
       text: "AMTI’s force platform stairway has been designed in response to clinical patient requests to improve their gait while going up and down stairs."
     },
     {
-      img: "",
+      img: "/images/amti-force-torque.png",
       title: "AMTI Force/Torque Sensors",
       text: "AMTI’s multi-axis load cells (multi-axis transducers) are ideal whenever it is important to measure forces and moments in three dimensions."
     },
