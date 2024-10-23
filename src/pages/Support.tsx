@@ -131,7 +131,9 @@ export default function App() {
         <div className="p-12 flex flex-col items-center gap-y-4 md:gap-y-8 leading-8 ">
           <div className="max-w-lg md:max-w-4xl md:flex gap-x-8">
             <div className="flex gap-x-4 my-4 justify-between">
-              <img src="/images/support.png" alt="" className="w-full flex-1" />
+              <div>
+                <img src="/images/support.png" alt="" className="w-[200px] flex-1 h-[300px]" />
+              </div>
               <div className="flex-1">
                 <h1 className="font-bold my-4">Support</h1>
                 <p>As a valued Summit Vision Nusantara customer, help is only ever an e ail or phone call away. Contact us at <a href="mailto:ptsvnusantara@gmail.com"></a>ptsvnusantara@gmail.com For remote assistance, if you need to share your screen, please dowload Team viewer from the link below</p>
@@ -141,7 +143,9 @@ export default function App() {
               </div>
             </div>
             <div className="flex gap-x-4 my-4">
-              <iframe src="https://drive.google.com/file/d/12DuAEFq8D1ufyohkuyCDjr9s_-foplKy/preview" allow="autoplay" className="w-full flex-1"></iframe>
+              <div>
+                <iframe src="https://drive.google.com/file/d/12DuAEFq8D1ufyohkuyCDjr9s_-foplKy/preview" allow="autoplay" className="w-[200px] flex-1 h-[300px]"></iframe>
+              </div>
               <div className="flex-1">
                 <h1 className="font-bold my-4">Documentation</h1>
                 <p>Have a more in-depth question about how your software or hardware works? Visit this page to view our wide range of detailed technical documentation, containing many useful user guides</p>
