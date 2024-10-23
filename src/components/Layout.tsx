@@ -93,7 +93,7 @@ export function Layout({ children, mode = "white" }: Props) {
             }
           </button>
           <img src="/images/ptsv.jpg" alt="" className="w-14" />
-          <h1 className={clsx("font-bold", isOpen && "text-white")}>PT Summit Vision Nusantara</h1>
+          <h1 className={clsx("font-bold", (mode == "black" && isTop) ? "text-black" :"text-white",isOpen && "text-white")}>PT Summit Vision Nusantara</h1>
         </div>
 
         <div className="hidden lg:flex gap-x-8 items-center">

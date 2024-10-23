@@ -130,7 +130,7 @@ export default function App() {
         <Banner />
         <div className="p-12 flex flex-col items-center gap-y-4 md:gap-y-8 leading-8 ">
           <div className="max-w-lg md:max-w-4xl md:flex gap-x-8">
-            <div className="flex gap-x-4 my-4 justify-between">
+            <div className="flex gap-x-8 my-4 mb-12">
               <div>
                 <img src="/images/support.png" alt="" className="w-[200px] flex-1 h-[300px]" />
               </div>
@@ -142,7 +142,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-x-4 my-4">
+            <div className="flex gap-x-8 my-4">
               <div>
                 <iframe src="https://drive.google.com/file/d/12DuAEFq8D1ufyohkuyCDjr9s_-foplKy/preview" allow="autoplay" className="w-[200px] flex-1 h-[300px]"></iframe>
               </div>
