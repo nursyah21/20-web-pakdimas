@@ -126,23 +126,28 @@ function Portfolio() {
 const sponsor = [
   {
     img: "/images/vicon-logo.png",
-    title: "VICON"
+    title: "VICON",
+    link: "https://www.vicon.com/"
   },
   {
     img: "/images/motek-logo.png",
-    title: "MOTEK"
+    title: "MOTEK",
+    link: "https://www.motekmedical.com/"
   },
   {
     img: "/images/cometa-logo.png",
-    title: "COMETA"
+    title: "COMETA",
+    link: "https://www.cometasystems.com/"
   },
   {
     img: "/images/cyberdine-logo.png",
-    title: "CYBERDYNE"
+    title: "CYBERDYNE",
+    link: "https://www.cyberdyne.jp/english/"
   },
   {
     img: "/images/amti-logo.png",
-    title: "AMTI"
+    title: "AMTI",
+    link: "https://www.amti.biz/"
   }
 ]
 
@@ -165,10 +170,10 @@ export default function App() {
             <div className="max-w-lg md:max-w-2xl grid md:grid-cols-3 gap-x-8 gap-y-8">
               {
                 sponsor.map((e, idx) =>
-                  <div key={idx}>
+                  <a key={idx} href={e.link}>
                     <img src={e.img} alt="" className="max-w-[200px] max-h-[100px]" />
                     <h1>{e.title}</h1>
-                  </div>
+                  </a>
                 )
               }
             </div>
