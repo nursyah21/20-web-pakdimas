@@ -96,7 +96,7 @@ export function Layout({ children, mode = "white" }: Props) {
           <h1 className={clsx("font-bold", (mode == "black" && isTop) ? "text-black" :"text-white",isOpen && "text-white")}>PT Summit Vision Nusantara</h1>
         </div>
 
-        <div className="hidden lg:flex gap-x-8 items-center">
+        <div className={clsx("hidden lg:flex gap-x-8 items-center", (mode == "black" && isTop) ? "text-black" :"text-white")}>
           <A href="/" className="hover:opacity-80" classActive="font-bold">Home</A>
           <A href="/products-and-services" className="hover:opacity-80" classActive="font-bold">Products and Services</A>
           <A href="/partner" className="hover:opacity-80" classActive="font-bold">Partner</A>
