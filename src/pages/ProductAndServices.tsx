@@ -149,7 +149,9 @@ export default function App() {
               {data.vicons.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[300px] max-h-[300px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  <a href={e.link} className="hover:underline">
+                    <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+                  </a>
                   <p>{e.text}</p>
                 </div>
               )}
@@ -166,7 +168,9 @@ export default function App() {
               {data.viconHardware.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <a href={e.link} className="hover:underline">
+                    <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  </a>
                   <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
@@ -183,7 +187,9 @@ export default function App() {
               {data.amti.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <a href={e.link} className="hover:underline">
+                    <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  </a>
                   <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
@@ -200,7 +206,9 @@ export default function App() {
               {data.cometa.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <a href={e.link} className="hover:underline">
+                    <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  </a>
                   <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
@@ -217,7 +225,9 @@ export default function App() {
               {data.motek.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <a href={e.link} className="hover:underline">
+                    <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  </a>
                   <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}
@@ -234,7 +244,9 @@ export default function App() {
               {data.cyberdyne.map((e, idx) =>
                 <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
                   <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
-                  <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  <a href={e.link} className="hover:underline">
+                    <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+                  </a>
                   <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
                 </div>
               )}

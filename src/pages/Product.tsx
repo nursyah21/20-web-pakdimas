@@ -124,7 +124,9 @@ function Portfolio() {
   </>
 }
 
-
+// shogun https://www.vicon.com/software/shogun/
+// nexus https://www.vicon.com/software/nexus/
+// tracker https://www.vicon.com/software/tracker/
 
 export default function App() {
   const path = location.pathname.slice(9)
@@ -132,11 +134,7 @@ export default function App() {
     <>
       <Layout mode="black">
       <Banner />
-        {path}
-        {/* 
-        <AboutUs />
-        <Vision />
-        <Portfolio /> */}
+        {path}        
       </Layout>
 
     </>

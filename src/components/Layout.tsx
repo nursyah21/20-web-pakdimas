@@ -59,10 +59,10 @@ function ContactUs() {
 
 export function Layout({ children, mode = "white" }: Props) {
   const [isOpen, setIsOpen] = useState(false)
-  const [isTop, setIsTop] = useState(true)
-
+  const [isTop, setIsTop] = useState(!(window.scrollY > 0))
+  
   useEffect(() => {
-    const isScrollDown = (e: Event) => {
+    const isScrollDown = (_: Event) => {
       if (window.scrollY > 10) {
         setIsTop(false)
       } else {
@@ -87,16 +87,16 @@ export function Layout({ children, mode = "white" }: Props) {
           <button onClick={() => setIsOpen(!isOpen)} className="hover:opacity-80 block lg:hidden">
             {isOpen
               // close
-              ? <svg xmlns="http://www.w3.org/2000/svg"  height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+              ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
               // menu
-              : <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill={(mode == "black" && isTop) ? "#000000" :"#e8eaed"}><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+              : <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill={(mode == "black" && isTop) ? "#000000" : "#e8eaed"}><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
             }
           </button>
           <img src="/images/ptsv.jpg" alt="" className="w-14" />
-          <h1 className={clsx("font-bold", (mode == "black" && isTop) ? "text-black" :"text-white",isOpen && "text-white")}>PT Summit Vision Nusantara</h1>
+          <h1 className={clsx("font-bold", (mode == "black" && isTop) ? "text-black" : "text-white", isOpen && "text-white")}>PT Summit Vision Nusantara</h1>
         </div>
 
-        <div className={clsx("hidden lg:flex gap-x-8 items-center", (mode == "black" && isTop) ? "text-black" :"text-white")}>
+        <div className={clsx("hidden lg:flex gap-x-8 items-center", (mode == "black" && isTop) ? "text-black" : "text-white")}>
           <A href="/" className="hover:opacity-80" classActive="font-bold">Home</A>
           <A href="/products-and-services" className="hover:opacity-80" classActive="font-bold">Products and Services</A>
           <A href="/partner" className="hover:opacity-80" classActive="font-bold">Partner</A>
