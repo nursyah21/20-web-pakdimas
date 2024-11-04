@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { useEffect, useState } from "react"
 import { A } from "./A"
+import { $ } from "../utils"
 
 interface Props {
   children?: any,
@@ -57,10 +58,14 @@ function ContactUs() {
   </>
 }
 
+// edit navbar product and services
+// vicon, amti, cometa, motek, cyberdyne
+
 export function Layout({ children, mode = "white" }: Props) {
   const [isOpen, setIsOpen] = useState(false)
   const [isTop, setIsTop] = useState(!(window.scrollY > 0))
-  
+  const [openDropdown, setOpenDropdown] = useState(false)
+
   useEffect(() => {
     const isScrollDown = (_: Event) => {
       if (window.scrollY > 10) {
@@ -70,8 +75,18 @@ export function Layout({ children, mode = "white" }: Props) {
       }
     }
     window.addEventListener("scroll", isScrollDown)
+    const dropdownremove = (_: Event) => {
+      $('.dropdown')[0].classList.remove('hidden')
+      $('.dropdown')[0].classList.add('flex')
+    }
+    const dropdownadd = (_: Event) => $('.dropdown')[0].classList.add('hidden')
+    $('.dropdown')[0].addEventListener('mouseenter', dropdownremove)
+    $('.dropdown')[0].addEventListener('mouseleave', dropdownadd)
+
     return () => {
       window.removeEventListener('scroll', isScrollDown)
+      $('.dropdown')[0].removeEventListener('mouseenter', dropdownremove)
+      $('.dropdown')[0].removeEventListener('mouseleave', dropdownadd)
     }
   }, [])
   return (
@@ -98,7 +113,18 @@ export function Layout({ children, mode = "white" }: Props) {
 
         <div className={clsx("hidden lg:flex gap-x-8 items-center", (mode == "black" && isTop) ? "text-black" : "text-white")}>
           <A href="/" className="hover:opacity-80" classActive="font-bold">Home</A>
-          <A href="/products-and-services" className="hover:opacity-80" classActive="font-bold">Products and Services</A>
+
+          <div className="relative">
+            <button className="peer hover:opacity-80" >Products and Services</button>
+            <div className="dropdown hidden peer-hover:flex absolute bg-header  flex-col text-white gap-y-4 p-4 w-[180px]">
+              <A href="/product/vicon" className=" hover:opacity-80" classActive="font-bold">VICON</A>
+              <A href="/product/amti" className="hover:opacity-80" classActive="font-bold">MOTEK</A>
+              <A href="/product/cometa" className="hover:opacity-80" classActive="font-bold">AMTI</A>
+              <A href="/product/motek" className="hover:opacity-80" classActive="font-bold">COMETA</A>
+              <A href="/product/cyberdyne" className="hover:opacity-80" classActive="font-bold">CYBERDYNE</A>
+            </div>
+          </div>
+
           <A href="/partner" className="hover:opacity-80" classActive="font-bold">Partner</A>
           <A href="/support" className="hover:opacity-80" classActive="font-bold">Support</A>
         </div>
@@ -107,10 +133,20 @@ export function Layout({ children, mode = "white" }: Props) {
       {/* modal navbar */}
       <div className={clsx("bg-header h-screen fixed top-0 transition-all ease-in-out duration-300 lg:hidden z-10", isOpen ? 'w-full' : 'w-0')}>
         <div className={clsx("flex-col flex gap-y-2 text-white translate-y-[60px] py-2 px-4 transition-all", isOpen ? "opacity-100 delay-300" : "opacity-0")}>
-          <A href="/" className="hover:opacity-80">Home</A>
-          <A href="/products-and-services" className="hover:opacity-80">Products and Services</A>
-          <A href="/partner" className="hover:opacity-80">Partner</A>
-          <A href="/support" className="hover:opacity-80">Support</A>
+          <A href="/" className="hover:opacity-80" classActive="font-bold">Home</A>
+          {/* <A href="/products-and-services" className="hover:opacity-80">Products and Services</A> */}
+          <div className="relative">
+            <button onClick={() => setOpenDropdown(!openDropdown)}>Products and Services</button>
+            <div className={clsx(" flex-col gap-y-4 p-4", openDropdown ? 'flex' : 'hidden')}>
+              <A href="/product/vicon" className="peer hover:opacity-80" classActive="font-bold">VICON</A>
+              <A href="/product/amti" className="hover:opacity-80" classActive="font-bold">MOTEK</A>
+              <A href="/product/cometa" className="hover:opacity-80" classActive="font-bold">AMTI</A>
+              <A href="/product/motek" className="hover:opacity-80" classActive="font-bold">COMETA</A>
+              <A href="/product/cyberdyne" className="hover:opacity-80" classActive="font-bold">CYBERDYNE</A>
+            </div>
+          </div>
+          <A href="/partner" className="hover:opacity-80" classActive="font-bold">Partner</A>
+          <A href="/support" className="hover:opacity-80" classActive="font-bold">Support</A>
         </div>
       </div>
 

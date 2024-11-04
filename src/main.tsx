@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path='/' Component={Home} />
-        <Route path='/products-and-services' Component={ProductAndServices} />
+        {/* <Route path='/products-and-services' Component={ProductAndServices} /> */}
         <Route path='/partner' Component={Partner} />
         <Route path='/support' Component={Support} />
         <Route path='/product/:id' Component={Product} />

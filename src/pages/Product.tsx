@@ -127,6 +127,47 @@ function Portfolio() {
 // shogun https://www.vicon.com/software/shogun/
 // nexus https://www.vicon.com/software/nexus/
 // tracker https://www.vicon.com/software/tracker/
+// vicon-valkryie https://www.vicon.com/hardware/cameras/valkyrie/
+// vicon-vantage 
+// vicon-vero https://www.vicon.com/hardware/cameras/vero/
+// vicon-blue-triden https://www.vicon.com/hardware/blue-trident/
+// vicon-viper
+// vicon-viperx
+// vicon-calibration-wand
+// vicon-vue
+// vicon-camera-capsule
+// vicon-beacon https://www.vicon.com/hardware/devices/beacon/
+// vicon-pulsar https://www.vicon.com/hardware/devices/pulsar/
+// vicon-supernova https://www.vicon.com/hardware/devices/supernova/
+// vicon-nova
+// vicon-lock-sync-box
+// amti-accugait
+// amti-accupower
+// amti-accusway
+// amti-filler-force
+// amti-force-plate
+// amti-force-torque
+// amti-treadmills
+// amti-multi-axis
+// amti-optima-biomechanics
+// amti-optima-human
+// amti-optima-medical
+// amti-optima-special
+// cometa-emg-software
+// cometa
+// cometa-pico
+// cometa-mini-wave-infinity
+// cometa-mini-wave-waterproof
+// cometa-wave-plus
+// cometa-wavetrack
+// motek-caren
+// motek-cmill
+// motek-mgait
+// cyberdyne-hybrid-assitive-limb
+// cyberdyne-hal-peripherals
+// cyberdyne-transportation-robot
+// cyberdyne-hal-single-joint
+// cyberdyne-hal-for-medical-use
 
 export default function App() {
   const path = location.pathname.slice(9)

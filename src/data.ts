@@ -54,13 +54,13 @@ Created from the ground up based on the invaluable feedback of our global commun
       text: `With the best resolution/speed/price offering on the market, Vicon Vero is the latest optical camera from Vicon. 
 <br/><br/>
 Building on the success of Vantage, Vero combined market-leading resolution and speed at an unrivaled price point. Like its bigger brother, Vantage, Vero has on-board sensors that monitor camera position and temperature to ensure optimal performance at all times.`,
-      link: "/product/vicon-vantage"
+      link: "/product/vicon-vero"
     },
     {
       img: "/images/vicon-blue-triden.png",
       title: "VICON Blue Trident",
       text: "Engineered to capture the highest quality data Higher fidelity measurement, three times faster data download speed, and real-time analysis – in the field and in water – Vicon’s Blue Trident is our newest life sciences wearable. The next generation of our market-leading Inertial Measurement Unit (IMU), Blue Trident is lightweight, easy to use, flexible and reliable.",
-      link: "/product/vicon-vero"
+      link: "/product/vicon-blue-triden"
     },
     {
       img: "/images/vicon-viper.png",
@@ -176,7 +176,7 @@ Building on the success of Vantage, Vero combined market-leading resolution and 
       img: "/images/amti-optima-biomechanis.png",
       title: "AMTI Optima Biomechanics Measurement System",
       text: "AMTI’s Biomechanics Measurement System (Optima-BMS) is Optima technology in the most affordable package.",
-      link: "/product/amti-optima-biomechanis"
+      link: "/product/amti-optima-biomechanics"
     },
     {
       img: "/images/amti-optima-human.png",
@@ -278,7 +278,7 @@ Building on the success of Vantage, Vero combined market-leading resolution and 
       img: "/images/transportation-robot.png",
       title: "Transportation Robot",
       text: "Transportation Robot can work in factories, offices and various indoor environments without using floor markers. Transportation routes of the robot can be set flexibly as it does not require floor marker and grid installation*. The robot, therefore, can move between floors easily. The robot will support people by smartly “robotizing” work places",
-      link: "/product/cyberdyne-trasnportation-robot"
+      link: "/product/cyberdyne-transportation-robot"
     },
     {
       img: "/images/hal-single-joint.png",
