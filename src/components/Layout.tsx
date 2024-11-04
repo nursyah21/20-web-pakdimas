@@ -118,9 +118,9 @@ export function Layout({ children, mode = "white" }: Props) {
             <button className="peer hover:opacity-80" >Products and Services</button>
             <div className="dropdown hidden peer-hover:flex absolute bg-header  flex-col text-white gap-y-4 p-4 w-[180px]">
               <A href="/product/vicon" className=" hover:opacity-80" classActive="font-bold">VICON</A>
-              <A href="/product/amti" className="hover:opacity-80" classActive="font-bold">MOTEK</A>
-              <A href="/product/cometa" className="hover:opacity-80" classActive="font-bold">AMTI</A>
-              <A href="/product/motek" className="hover:opacity-80" classActive="font-bold">COMETA</A>
+              <A href="/product/motek" className="hover:opacity-80" classActive="font-bold">MOTEK</A>
+              <A href="/product/amti" className="hover:opacity-80" classActive="font-bold">AMTI</A>
+              <A href="/product/cometa" className="hover:opacity-80" classActive="font-bold">COMETA</A>
               <A href="/product/cyberdyne" className="hover:opacity-80" classActive="font-bold">CYBERDYNE</A>
             </div>
           </div>
@@ -139,9 +139,9 @@ export function Layout({ children, mode = "white" }: Props) {
             <button onClick={() => setOpenDropdown(!openDropdown)}>Products and Services</button>
             <div className={clsx(" flex-col gap-y-4 p-4", openDropdown ? 'flex' : 'hidden')}>
               <A href="/product/vicon" className="peer hover:opacity-80" classActive="font-bold">VICON</A>
-              <A href="/product/amti" className="hover:opacity-80" classActive="font-bold">MOTEK</A>
-              <A href="/product/cometa" className="hover:opacity-80" classActive="font-bold">AMTI</A>
-              <A href="/product/motek" className="hover:opacity-80" classActive="font-bold">COMETA</A>
+              <A href="/product/motek" className="hover:opacity-80" classActive="font-bold">MOTEK</A>
+              <A href="/product/amti" className="hover:opacity-80" classActive="font-bold">AMTI</A>
+              <A href="/product/cometa" className="hover:opacity-80" classActive="font-bold">COMETA</A>
               <A href="/product/cyberdyne" className="hover:opacity-80" classActive="font-bold">CYBERDYNE</A>
             </div>
           </div>

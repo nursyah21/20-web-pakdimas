@@ -1,183 +1,172 @@
 import { Layout } from "../components/Layout"
+import { data } from "../data"
 
-function AboutUs() {
-  return (<>
-    <div className=" text-center">
-      <h1 className="text-2xl font-bold my-8 font-serif">
-        ABOUT US
-      </h1>
-      <div className="text-blue-900 bg-about p-12 flex flex-col items-center gap-y-4 leading-8">
-        <p className="max-w-lg md:max-w-4xl">
-          PT Summit Vision Nusantara is a company registered in Indonesia since April 7th, 2023. PT SVN planned to venture into the field of biomechanics and human performance fields and aims to become the main industry support to the institution in the implementation of Motion Analysis and Assistance in Indonesia.
-        </p>
-        <p className="max-w-lg md:max-w-4xl">PT SVN is Indonesia #1 motion capture integrator and life sciences equipment provider. We are Indonesia’s only provider of VICON systems and nearby countries. Our offer is a unique fusion of the best motion capture technology, programme, and expertise. We provide and integrate fully customized motion capture systems for human movement research, object tracking, visual effects, gaming, virtual and augmented reality. At the same time, we are also working on Indonesia's original product regarding motion analysis and treatment.</p>
-      </div>
-    </div>
-  </>)
+type props = {
+  title: string
 }
 
-function Banner() {
+function Banner({ title }: props) {
   return (<>
     <div className="relative">
       <div className="flex flex-col w-full absolute h-[500px] text-4xl font-bold text-center justify-center items-center">
-        <h1 className="">
-          Welcome to the official website
+        <h1 className="text-white">
+          {title}
         </h1>
-        <h1 className="">
+        {/* <h1 className="">
           PT Summit Vision Nusantara
-        </h1>
+        </h1> */}
       </div>
-      <img src="/images/banner.png" alt="" className="h-[500px] object-cover w-full" />
+      <img src="/images/banner-product-and-services.png" alt="" className="h-[500px] object-cover w-full" />
     </div>
   </>)
 }
 
-function Vision() {
-
+function Vicon() {
   return <>
-    <div className="bg-bluebg text-white p-12 flex flex-col items-center gap-y-4 leading-8 ">
-      <div className="max-w-lg md:max-w-4xl md:flex">
-        <h1 className="text-3xl mb-12 font-medium mr-[6rem]">VISION</h1>
-        <h1 className="text-lg leading-8">To be a sustainable leader in scientific fields related to human movement and performance studies to contribute to nation’s growth and building towards year 2030 </h1>
-      </div>
-
-      <div className="max-w-lg md:flex md:max-w-4xl">
-        <h1 className="text-3xl mb-12 font-medium mr-[4.5rem]">MISSION</h1>
-        <h1 className="text-lg leading-8">Develop and empower local expertise together with local higher education institutions as catalyst to enhance Malaysia achievement globally in areas such as sports, medical, industry, education and etc. </h1>
-      </div>
-      <div className="max-w-lg md:flex md:max-w-4xl">
-        <h1 className="text-3xl mb-12 font-medium mr-12">STRATEGY</h1>
-        <ul className="text-lg leading-8 ml-4 gap-y-4 flex flex-col">
-          <li>Develop partnership with foreign expertise for transfer technologies and developing local expertise</li>
-          <li>Collaborations with local higher education institutions in research studies, testing and training</li>
-          <li>Setting up technology center and laboratory, comprise of state-of-the-art equipment’s and experts</li>
-        </ul>
-      </div>
-    </div>
-  </>
-}
-
-function Portfolio() {
-  return <>
-    <div className="p-12 flex flex-col items-center gap-y-4 md:gap-y-8 leading-8 ">
-      <h1 className="text-bluePortfolio text-3xl underline font-semibold mb-16">
-        PORTFOLIO
+    <div className=" text-center">
+      {/* <h1 className="text-2xl font-bold my-8 underline text-cyan-900">
+                    VICON
+                  </h1> */}
+      <h1 className="text-md py-6 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
+        SOFTWARE
       </h1>
-      <div className="max-w-lg md:max-w-4xl md:flex">
-        <div className="mr-12">
-          <img src="/images/gait.png" alt="" className="w-[400px] mb-8" />
-        </div>
-        <div className="flex-1 gap-y-4 flex flex-col">
-          <h1 className="text-[#351c75] font-bold text-3xl">
-            Gait and Movement Analysis
-          </h1>
-          <h1 className="text-blue-800">
-            The Gait and Motion Analysis Laboratory
-            <span className="font-bold"> uses state-of-the-art computer technology to capture a 3-D image of a Rehab Patient, Athletes or even animal movement pattern.</span> The
-            system consists of Motion system with integrating equipment such as EMG Sensor, and Force plate. Electrodes and Reflective markers that are placed on the subject used to measure muscle activity and track motion of body segments. This measured data can be used to analyses subject data to helps in Rehabilitation, Sports performance study and Biomechanics study. Here we share a few Motion Lab in Malaysia.
-          </h1>
+      <div className="flex items-center flex-col ">
+        <div className="max-w-lg xl:max-w-4xl  flex flex-col xl:flex-row gap-y-4 gap-x-8">
+          {data.vicons.map((e, idx) =>
+            <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+              <img src={e.img} alt="" className="max-w-[300px] max-h-[300px]" />
+              <a href={e.link} className="hover:underline">
+                <h1 className="text-2xl text-cyan-900 font-bold my-4">{e.title}</h1>
+              </a>
+              <p>{e.text}</p>
+            </div>
+          )}
         </div>
       </div>
+    </div>
 
-      <div className="max-w-lg md:max-w-4xl md:flex">
-        <div className="mr-12">
-          <img src="/images/sport.png" alt="" className="w-[400px] mb-8" />
-        </div>
-        <div className="flex-1 gap-y-4 flex flex-col">
-          <h1 className="text-[#351c75] font-bold text-3xl">
-            Sports Performance Analysis
-          </h1>
-          <h1 className="text-blue-800">
-            Sports Performance Analysis is <span className="font-bold">a specialised discipline that provides athletes and coaches with objective information that helps them understand performance.</span> This process is underpinned by systematic observation, which provides valid, reliable and detailed information relating to performance.
-          </h1>
-        </div>
-      </div>
-
-      <div className="max-w-lg md:max-w-4xl md:flex">
-        <div className="mr-12">
-          <img src="/images/animation.png" alt="" className="w-[400px] mb-8" />
-        </div>
-        <div className="flex-1 gap-y-4 flex flex-col">
-          <h1 className="text-[#351c75] font-bold text-3xl">
-            Animation and Games
-          </h1>
-          <h1 className="text-blue-800">
-            As <span className="font-bold"> game animation is often a complicated combination of different types of movement, </span> animators make libraries of the movements, so they can reuse them for each character. They work in a way that makes best use of the game engine’s technology and maximises the opportunities for game play and interactivity.
-          </h1>
-        </div>
-      </div>
-
-      <div className="max-w-lg md:max-w-4xl md:flex">
-        <div className="mr-12">
-          <img src="/images/engineering.jpg" alt="" className="w-[400px] mb-8" />
-        </div>
-        <div className="flex-1 gap-y-4 flex flex-col">
-          <h1 className="text-[#351c75] font-bold text-3xl">
-            Engineering
-          </h1>
-          <h1 className="text-blue-800">
-            In particular, virtual related engineering means that <span className="font-bold"> design and validation activities occur collaboratively in order to prove early product designs, support decision making and enable continuous product optimisation </span> within interdisciplinary and cross-enterpise partnerships. This causes an important redefinition of the overall product development process for supporting the coordination, assessment and concretion of engineering results of all involved partners with the support of virtual builds.
-          </h1>
+    <div className=" text-center">
+      <h1 className="text-md py-6 my-8 bg-[url(/images/background-productand-services.png)] text-white" style={{ backgroundPosition: "center", backgroundSize: "cover", boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, .5)" }}>
+        HARDWARE
+      </h1>
+      <div className="flex items-center flex-col bg-about">
+        <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
+          {data.viconHardware.map((e, idx) =>
+            <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+              <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+              <a href={e.link} className="hover:underline">
+                <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+              </a>
+              <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
+            </div>
+          )}
         </div>
       </div>
     </div>
   </>
 }
 
-// shogun https://www.vicon.com/software/shogun/
-// nexus https://www.vicon.com/software/nexus/
-// tracker https://www.vicon.com/software/tracker/
-// vicon-valkryie https://www.vicon.com/hardware/cameras/valkyrie/
-// vicon-vantage 
-// vicon-vero https://www.vicon.com/hardware/cameras/vero/
-// vicon-blue-triden https://www.vicon.com/hardware/blue-trident/
-// vicon-viper
-// vicon-viperx
-// vicon-calibration-wand
-// vicon-vue
-// vicon-camera-capsule
-// vicon-beacon https://www.vicon.com/hardware/devices/beacon/
-// vicon-pulsar https://www.vicon.com/hardware/devices/pulsar/
-// vicon-supernova https://www.vicon.com/hardware/devices/supernova/
-// vicon-nova
-// vicon-lock-sync-box
-// amti-accugait
-// amti-accupower
-// amti-accusway
-// amti-filler-force
-// amti-force-plate
-// amti-force-torque
-// amti-treadmills
-// amti-multi-axis
-// amti-optima-biomechanics
-// amti-optima-human
-// amti-optima-medical
-// amti-optima-special
-// cometa-emg-software
-// cometa
-// cometa-pico
-// cometa-mini-wave-infinity
-// cometa-mini-wave-waterproof
-// cometa-wave-plus
-// cometa-wavetrack
-// motek-caren
-// motek-cmill
-// motek-mgait
-// cyberdyne-hybrid-assitive-limb
-// cyberdyne-hal-peripherals
-// cyberdyne-transportation-robot
-// cyberdyne-hal-single-joint
-// cyberdyne-hal-for-medical-use
+function Motek() {
+  return <>
+    <div className=" text-center">
+      <div className="flex items-center flex-col bg-about">
+        <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
+          {data.motek.map((e, idx) =>
+            <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+              <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+              <a href={e.link} className="hover:underline">
+                <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+              </a>
+              <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </>
+}
+
+function Amti() {
+  return <>
+    <div className=" text-center">
+      <div className="flex items-center flex-col bg-about">
+        <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
+          {data.amti.map((e, idx) =>
+            <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+              <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+              <a href={e.link} className="hover:underline">
+                <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+              </a>
+              <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </>
+}
+
+function Cometa() {
+  return <>
+    <div className=" text-center">
+      <div className="flex items-center flex-col bg-about">
+        <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
+          {data.cometa.map((e, idx) =>
+            <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+              <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+              <a href={e.link} className="hover:underline">
+                <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+              </a>
+              <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </>
+}
+
+function Cyberdyne() {
+  return <>
+    <div className=" text-center">
+      <div className="flex items-center flex-col bg-about">
+        <div className="max-w-lg xl:max-w-4xl grid md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-8">
+          {data.cyberdyne.map((e, idx) =>
+            <div key={idx} className="max-w-[544px] my-8 flex flex-col items-center">
+              <img src={e.img} alt="" className="max-w-[200px] max-h-[300px]" />
+              <a href={e.link} className="hover:underline">
+                <h1 className="text-2xl text-cyan-900 font-bold my-4 text-justify">{e.title}</h1>
+              </a>
+              <div dangerouslySetInnerHTML={{ __html: e.text }} className="text-justify"></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </>
+}
+
+const paths = ['vicon', 'motek', 'amti', 'cometa', 'cyberdyne']
 
 export default function App() {
   const path = location.pathname.slice(9)
+  paths.indexOf
   return (
     <>
-      <Layout mode="black">
-      <Banner />
-        {path}        
+      <Layout >
+        {
+          paths.indexOf(path) != -1 ?
+            <>
+              <Banner title={path.toUpperCase()} />
+              {path == 'vicon' && <Vicon />}
+              {path == 'motek' && <Motek />}
+              {path == 'amti' && <Amti />}
+              {path == 'cometa' && <Cometa />}
+              {path == 'cyberdyne' && <Cyberdyne />}
+            </>
+            : null
+        }
       </Layout>
-
     </>
   )
 }
