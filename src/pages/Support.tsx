@@ -137,7 +137,6 @@ export default function App() {
               <div className="flex-1">
                 <h1 className="font-bold my-4">Support</h1>
                 <p>As a valued Summit Vision Nusantara customer, help is only ever an email or phone call away. Contact us at <a href="mailto:ptsvnusantara@gmail.com">ptsvnusantara@gmail.com</a>
-                </div>
               </div>
             </div>
             <div className="flex gap-x-8 my-4">
