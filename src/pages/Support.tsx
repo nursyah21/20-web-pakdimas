@@ -136,9 +136,7 @@ export default function App() {
               </div>
               <div className="flex-1">
                 <h1 className="font-bold my-4">Support</h1>
-                <p>As a valued Summit Vision Nusantara customer, help is only ever an e ail or phone call away. Contact us at <a href="mailto:ptsvnusantara@gmail.com"></a>ptsvnusantara@gmail.com For remote assistance, if you need to share your screen, please dowload Team viewer from the link below</p>
-                <div className="flex text-center hover:opacity-90 duration-150">
-                  <a href="mailto:ptsvnusantara@gmail.com" className="w-full bg-[rgba(13,19,55,1)] text-white">EMAIL US</a>
+                <p>As a valued Summit Vision Nusantara customer, help is only ever an email or phone call away. Contact us at <a href="mailto:ptsvnusantara@gmail.com">ptsvnusantara@gmail.com</a>
                 </div>
               </div>
             </div>
